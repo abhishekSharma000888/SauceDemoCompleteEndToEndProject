@@ -3,7 +3,7 @@
 A BDD-style test automation framework using Selenium WebDriver and Cucumber, built with a clean Page Object Model (POM) architecture for better maintainability and scalability.
 
 ## 🧩 Project Structure
-![](/Users/abhisheksharma/Downloads/SDETProjects/SauceDemoCompleteEndToEndProject/src/test/images/image01.png)
+![Screenshot of login page](src/test/images/image01.png)
 
 ## ⚙️ Prerequisites
 
