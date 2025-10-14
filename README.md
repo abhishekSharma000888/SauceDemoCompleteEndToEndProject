@@ -1,67 +1,66 @@
-# Selenium Cucumber Framework
+# 🚀 Selenium Cucumber Framework
 
-A BDD-style test automation framework using Selenium WebDriver and Cucumber.
+A BDD-style test automation framework using Selenium WebDriver and Cucumber, built with a clean Page Object Model (POM) architecture for better maintainability and scalability.
 
-## Project Structure
-├── src/test/
-│ ├── java/
-│ │ ├── base/
-│ │ │ └── BaseTest.java
-│ │ ├── pages/
-│ │ │ ├── LoginPage.java
-│ │ │ └── HomePage.java
-│ │ ├── stepdefinitions/
-│ │ │ ├── LoginSteps.java
-│ │ │ └── Hooks.java
-│ │ ├── runners/
-│ │ │ └── TestRunner.java
-│ │ └── utils/
-│ │ ├── ConfigReader.java
-│ │ ├── DriverFactory.java
-│ │ └── ScreenshotUtil.java
-│ └── resources/
-│ ├── features/
-│ │ └── login.feature
-│ └── config.properties
-├── target/
-│ └── allure-results/
-└── pom.xml
+## 🧩 Project Structure
+![](/Users/abhisheksharma/Downloads/SDETProjects/SauceDemoCompleteEndToEndProject/src/test/images/image01.png)
 
+## ⚙️ Prerequisites
 
-## Prerequisites
+Java 11 or higher
 
-- Java 11+
-- Maven 3.6+
-- Chrome/Firefox browser
+Maven 3.6 or higher
 
-## Setup
+Chrome or Firefox browser installed
 
-1. Clone the repository
-2. Install dependencies: `mvn clean install`
-3. Run tests: `mvn test`
+## 🌟 Key Features
 
-## Features
+✅ Page Object Model (POM) for reusable and maintainable code
+✅ Behavior Driven Development (BDD) using Cucumber
+✅ Multi-browser support (Chrome, Firefox)
+✅ Configurable setup via config.properties
+✅ Automatic screenshot capture on test failures
+✅ Allure HTML reports for visual test reporting
+✅ Parallel execution support (optional via Cucumber-JVM plugin)
 
-- Page Object Model pattern
-- BDD with Cucumber
-- Multiple browser support (Chrome/Firefox)
-- Configurable through properties file
-- Automatic screenshot on failure
-- HTML test reports
+## 🧪 Writing Tests
 
-## Configuration
+Create a Feature File
 
-Edit `src/test/resources/config.properties` to change:
-- browser (chrome/firefox)
-- baseUrl
-- timeout settings
+Add under: src/test/resources/features
 
-## Writing Tests
+Example: login.feature
 
-1. Add feature files in `src/test/resources/features`
-2. Implement step definitions in `src/test/java/stepdefinitions`
-3. Add page objects in `src/test/java/pages`
+Feature: Login Functionality
+Scenario: Successful login with valid credentials
+Given user is on login page
+When user enters valid username and password
+Then user should be navigated to the home page
 
-## Running Tests
+Implement Step Definitions
 
-Execute: `mvn test` or run `TestRunner.java` as JUnit test
+Add steps in: src/test/java/stepdefinitions/LoginSteps.java
+
+Add Page Objects
+
+Define element locators and actions in src/test/java/pages/
+
+## 🧠 Best Practices
+
+Keep locators and logic separated (strict POM structure).
+
+Avoid hard-coded waits; use WebDriverWait for dynamic synchronization.
+
+Reuse steps where possible across features.
+
+Use tags (@smoke, @regression, etc.) to control execution scope.
+
+## 🧱 Future Enhancements
+
+✅ Integrate with Jenkins for CI/CD pipeline
+
+✅ Add Docker support for scalable test execution
+
+✅ Extend support for API testing using RestAssured
+
+✅ Add retry mechanism for flaky tests
